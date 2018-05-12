@@ -1,0 +1,33 @@
+<h1>Data Binding</h1>
+
+<h3>Interpolation</h3>
+
+<div>
+Company Name : {{company}}
+<br>
+<input type="text" value="{{name}}"/>
+</div>
+
+<h3>Property Binding</h3>
+<div>
+    <a [href]="url">{{company}}</a>
+    <br>
+    <input type="text" [value]="name"/>
+</div>
+
+<h3>Event Binding</h3>
+<div>
+
+    <input type="button" (click)="Greet()" value="Greet">
+    <br><br>
+    <button type="button" (click)="Greet()">Greet</button>
+    
+
+</div>
+
+<h3>Two-Way Data Binding</h3>
+<div>
+
+    <input type="text" [(ngModel)]="name">
+
+</div>

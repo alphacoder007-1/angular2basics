@@ -1,0 +1,20 @@
+<h1>Pipes</h1>
+
+<div>
+  <table class="table table-bordered table-hover">
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Address</td>
+      <td>Salary</td>
+      <td>Joinig</td>
+    </tr>
+    <tr *ngFor="let emp of employees;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{emp.name | uppercase}}</td>
+      <td>{{emp.address | lowercase | reverse}}</td>
+      <td>{{emp.salary | currency:'USD'}}</td>
+      <td>{{emp.joining | date:'MM/dd/yyyy'}}</td>
+    </tr>
+  </table>
+</div>

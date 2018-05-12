@@ -1,0 +1,13 @@
+<h1>Template Driven Form</h1>
+<hr>
+
+<div>
+<form #form="ngForm" (ngSubmit)="SaveData(form)" class="form-horizontal">
+  <div class="form-group">    
+      Name <input type="text" name="userName" #name="ngModel" [(ngModel)]="userName" class="form-control">
+  </div>
+  <div class="form-group">
+    <input type="submit" value="Save" class="btn btn-primary">
+  </div>
+</form>
+</div>

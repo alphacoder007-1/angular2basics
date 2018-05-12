@@ -1,0 +1,44 @@
+<h1 appHighlight>Structural Directive</h1>
+
+<div>
+  <input type="number" [(ngModel)]="num">
+</div>
+
+<h3 class="appHighlight">ngIf</h3>
+<div>
+
+  <div *ngIf="num!=undefined && num%2==0">
+    Even Number
+  </div>
+  <div *ngIf="num!=undefined && num%2>0">
+  Odd Number
+    </div>
+</div>
+
+<h3>ngIf...Else</h3>
+
+  <div *ngIf="num!=undefined && num%2==0 then tmplt1; else tmplt2">  </div>
+
+  <ng-template #tmplt1>Even Number</ng-template>
+  <ng-template #tmplt2>Odd Number</ng-template>
+
+<h3>ngSwitch</h3>
+<input type="text" [(ngModel)]="alphabet">
+<div>
+  <div [ngSwitch]="alphabet">
+    <div *ngSwitchCase="'a'">Vowels</div>
+    <div *ngSwitchCase="'e'">Vowels</div>
+    <div *ngSwitchCase="'i'">Vowels</div>
+    <div *ngSwitchCase="'o'">Vowels</div>
+    <div *ngSwitchDefault>Not Vowel</div>
+  </div>
+
+</div>
+
+<h3>ngFor</h3>
+<div *ngFor="let item of colors">
+  <ul>
+    <li>{{item}}</li>
+  </ul>
+</div>
+

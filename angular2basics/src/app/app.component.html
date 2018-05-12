@@ -1,0 +1,43 @@
+<div class="navbar navbar-default">
+    <a class="navbar-brand" [routerLink]="['/']">Angular App</a>
+    <ul class="nav navbar-nav">
+        <li >
+            <a [routerLink]="['/databinding']">Data Binding</a>
+        </li>
+        <li >
+            <a [routerLink]="['/directive']">Directive</a>
+        </li>
+        <li>
+            <a [routerLink]="['/pipe']">Pipe</a>
+        </li>
+        <li>
+            <a [routerLink]="['/about',4]" [queryParams]="{name:'Mahesh',address:'Fremont'}">About</a>
+        </li>
+        <li>
+            <a [routerLink]="['/Inheritance']" >Inheritance</a>
+        </li>
+        <li>
+            <a [routerLink]="['/Nested']" >Nested</a>
+        </li>
+        <li>
+            <a [routerLink]="['/templateform']" >Template Form</a>
+        </li>
+        <li>
+                <a [routerLink]="['/modelform']" >Model Form</a>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- <app-databinding></app-databinding>
+
+<app-directive></app-directive>
+
+<app-attrdir></app-attrdir>
+
+<app-pipe></app-pipe>
+
+<app-about></app-about>
+ -->
